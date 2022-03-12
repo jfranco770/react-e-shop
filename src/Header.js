@@ -1,16 +1,19 @@
 import React from 'react'
+import './Header.css';
 import { Storefront } from '@mui/icons-material'
 import { ShoppingBasket } from '@mui/icons-material'
+import { Search } from '@mui/icons-material'
 
 const Header = () => {
   return (
-    <div>
+    <div className='header'> 
         <div className="header_logo">
             <Storefront className='header_logoImage' fontSize='large'/>
-            <h2 className='header_logoTitle'>Josh'eShop</h2> 
+            <h2 className='header_logoTitle'>Josh's eShop</h2> 
         </div>
         <div className="header_search">
-            inputs
+            <input type="text" className='header_search' />
+            <Search className= 'header_searchIcon'/>
         </div>
         <div className="header_nav">
               <div className="nav_item">
@@ -23,9 +26,9 @@ const Header = () => {
                   <span className="nav_itemLineTwo">Shop</span>
               </div>
 
-              <div className="nav_item">
-                  <ShoppingBasket fontSize='large'/>
-                  <span className="nav_itemLineTwo">0</span>
+              <div className="nav_itemBasket">
+                  <ShoppingBasket />
+                  <span className="nav_itemLineTwo nav_basketCount ">0</span>
               </div>
           
         </div>
